@@ -2,17 +2,33 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>title</title>
+        <title>rock-paper-scissors</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="title">Rock, Paper, Scissors Game</div>
-        <div class="rules">Rules of the game: <br>You can chose the power of rock, the coverage of paper or the sharpness of scissors. <br>First who get to 5 point win the game!</div>
-        <div>
-            <button id="rock" value="rock">ROCK</button>
-            <button id="paper" value="paper">PAPER</button>
-            <button id="scissors" value="scissors">SCISSORS</button>
+        <div class="title">Rock Paper Scissors Game!</div>
+        <ul class="rules">Rules of the game: 
+            <li class="rules-element">You can chose the power of rock, the coverage of paper or the sharpness of scissors </ui>
+            <li class="rules-element">First who get 5 points win the game!</ui>
+        </ul>
+        <div class="buttons">
+            <button id="button-rock" value="Rock">
+                <img src="images/rock.png">
+                <div id="rock">Rock</div>
+            </button>
+            <button id="paper" value="Paper">
+                <img src='images/paper.png'>
+                <div>Paper</div>
+            </button>
+            <button id="scissors" value="Scissors">
+                <img src='images/scissors.png'>
+                <div>Scissors</div>
+            </button>
         </div>
-        <div id="results">Results:</div>
+        <div class="results-container">
+            <div id="results">Results:</div>
+        </div>
+        
 
         <script src="javascript.js" defer></script>
         

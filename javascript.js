@@ -85,38 +85,29 @@ var playerScore = 0;
 
 // playGame(rounds);
 
-// const rockBtn = document.querySelector("#rock");
-// const paperBtn = document.querySelector("#paper");
-// const scissorsBtn = document.querySelector("#scissors");
-const resultsDiv = document.querySelector('#results');
+const resultsContainer = document.querySelector('.results-container');
 const buttons = document.querySelectorAll('button');
+const resultLine = document.createElement('div');
+const computerChoideDiv = document.createElement('div');
+const playerChoiceDiv = document.createElement('div');
 
+computerChoideDiv.setAttribute('class', 'computer-choice');
+playerChoiceDiv.setAttribute('class', 'player-choice');
+resultLine.setAttribute('class','result-line');
 
-// rockBtn.addEventListener('click', ()=> {
-//     resultLine.textContent = `PlayerChoice: Rock`;
-//     playRound("rock", getComputerChoice());
-// })
-// paperBtn.addEventListener('click', ()=> {
-//     resultLine.textContent = `PlayerChoice: Paper`;
-//     playRound("paper", getComputerChoice());
-// })
-// scissorsBtn.addEventListener('click', ()=> {
-//     resultLine.textContent = `PlayerChoice: Scissors`;
-//     playRound("scissors", getComputerChoice());
-// })
+resultsContainer.appendChild(playerChoiceDiv);
+resultsContainer.appendChild(computerChoideDiv);
+resultsContainer.appendChild(resultLine);
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         playerChoiceDiv.textContent = `Player Choice: ${button.value}`;
         playRound(button.value, getComputerChoice());
     })
+    button.addEventListener('mouseover', () => {
+        button.focus();
+    })
 })
 
-const resultLine = document.createElement('div');
-const computerChoideDiv = document.createElement('div');
-const playerChoiceDiv = document.createElement('div');
-resultsDiv.appendChild(playerChoiceDiv);
-resultsDiv.appendChild(computerChoideDiv);
-resultLine.textContent = ""
-resultsDiv.appendChild(resultLine);
+
 
